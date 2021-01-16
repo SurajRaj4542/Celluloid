@@ -31,6 +31,6 @@ If you find a bug, don't be afraid to report it in our Telegram group or open an
 [@PaulSonOfLars](https://github.com/PaulSonOfLars/tgbot) <br>
 [@skyleebot](https://github.com/SensiPeeps/skyleebot) <br>
 [@NobArxtx](https://github.com/NobArxtx) <br>
-[@AnimeKaizoku](https://github.com/AnimeKaizoku/SaitamaRobot)
+[@AnimeKaizoku](https://github.com/AnimeKaizoku/SaitamaRobot) <br>
 [@MeAnii](https://github.com/meanii) <br>
-[@AmTanny](https://github.com/AmTanny) <br>
+[@AmTanny](https://github.com/AmTanny) 
