@@ -15,20 +15,20 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
-    BOT_TOKEN = os.getenv(BOT_TOKEN)
+    BOT_TOKEN = os.getenv('BOT_TOKEN')
     OWNER_ID = (
-        os.getenv(OWNER_ID)  # If you dont know, run the bot and do /id in your private chat with it
+        os.getenv('OWNER_ID')  # If you dont know, run the bot and do /id in your private chat with it
     )
-    OWNER_USERNAME = os.getenv(OWNER_USERNAME)
-    TELETHON_HASH =  os.getenv(TELETHON_HASH)
-    TELETHON_ID = os.getenv(TELETHON_ID)
+    OWNER_USERNAME = os.getenv('OWNER_USERNAME')
+    TELETHON_HASH =  os.getenv('TELETHON_HASH')
+    TELETHON_ID = os.getenv('TELETHON_ID')
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = os.getenv(SQLALCHEMY_DATABASE_URI)  # needed for any database modules
-    REDIS_URI = os.getenv(REDIS_URI)
-    MESSAGE_DUMP = os.getenv(MESSAGE_DUMP)  # needed to make sure 'save from' messages persist
-    GBAN_DUMP = os.getenv(GBAN_DUMP)
-    ERROR_DUMP = os.getenv(ERROR_DUMP)
+    SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')  # needed for any database modules
+    REDIS_URI = os.getenv('REDIS_URI')
+    MESSAGE_DUMP = os.getenv('MESSAGE_DUMP')  # needed to make sure 'save from' messages persist
+    GBAN_DUMP = os.getenv('GBAN_DUMP')
+    ERROR_DUMP = os.getenv('ERROR_DUMP')
     LOAD = []
     NO_LOAD = []
     WEBHOOK = False
@@ -54,8 +54,8 @@ class Config(object):
     BAN_STICKER = None  
     ALLOW_EXCL = False  # DEPRECATED, USE BELOW INSTEAD! Allow ! commands as well as /
     CUSTOM_CMD = ('/', '!')   # Set to ('/', '!') or whatever to enable it, like ALLOW_EXCL but with more custom handler!
-    API_OPENWEATHER = os.getenv(API_OPENWEATHER)  # OpenWeather API
-    SPAMWATCH_API = os.getenv(SPAMWATCH_API) # Your SpamWatch token
+    API_OPENWEATHER = os.getenv('API_OPENWEATHER')  # OpenWeather API
+    SPAMWATCH_API = os.getenv('SPAMWATCH_API') # Your SpamWatch token
     
     
 class Production(Config):
