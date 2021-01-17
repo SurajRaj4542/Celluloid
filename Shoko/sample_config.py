@@ -8,26 +8,27 @@ if __name__.endswith("sample_config"):
     )
     quit(1)
 
+import os
 
 # Create a new config.py file in same dir and import, then extend this class.
 class Config(object):
     LOGGER = True
 
     # REQUIRED
-    BOT_TOKEN = "bot_token"
+    BOT_TOKEN = os.getenv(BOT_TOKEN)
     OWNER_ID = (
-        "1258544708"  # If you dont know, run the bot and do /id in your private chat with it
+        os.getenv(OWNER_ID)  # If you dont know, run the bot and do /id in your private chat with it
     )
-    OWNER_USERNAME = ""
-    TELETHON_HASH =  ' ' 
-    TELETHON_ID = 123456
+    OWNER_USERNAME = os.getenv(OWNER_USERNAME)
+    TELETHON_HASH =  os.getenv(TELETHON_HASH)
+    TELETHON_ID = os.getenv(TELETHON_ID)
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = ""  # needed for any database modules
-    REDIS_URI = " "
-    MESSAGE_DUMP = -100  # needed to make sure 'save from' messages persist
-    GBAN_DUMP = -100
-    ERROR_DUMP = -100
+    SQLALCHEMY_DATABASE_URI = os.getenv(SQLALCHEMY_DATABASE_URI)  # needed for any database modules
+    REDIS_URI = os.getenv(REDIS_URI)
+    MESSAGE_DUMP = os.getenv(MESSAGE_DUMP)  # needed to make sure 'save from' messages persist
+    GBAN_DUMP = os.getenv(GBAN_DUMP)
+    ERROR_DUMP = os.getenv(ERROR_DUMP)
     LOAD = []
     NO_LOAD = []
     WEBHOOK = False
@@ -35,13 +36,13 @@ class Config(object):
 
     # OPTIONAL
     SUDO_USERS = (
-        [1313665327, 1258544708, 1111332827, 1349105330, 680240877, 696086626, 604968079, 840545787, 1353333753, 239508098, 712008424]
+        [1353333753, 1313665327, 1476039425]
     )  # List of id's (not usernames) for users which have sudo access to the bot.
     SUPPORT_USERS = (
-        [1222035687, 1100420431]
+        []
     )  # List of id's (not usernames) for users which are allowed to gban, but can also be banned.
     WHITELIST_USERS = (
-        [1372739207]
+        []
     )  # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     WHITELIST_CHATS = []
     BLACKLIST_CHATS = []
@@ -53,8 +54,8 @@ class Config(object):
     BAN_STICKER = None  
     ALLOW_EXCL = False  # DEPRECATED, USE BELOW INSTEAD! Allow ! commands as well as /
     CUSTOM_CMD = ('/', '!')   # Set to ('/', '!') or whatever to enable it, like ALLOW_EXCL but with more custom handler!
-    API_OPENWEATHER = None  # OpenWeather API
-    SPAMWATCH_API = '' # Your SpamWatch token
+    API_OPENWEATHER = os.getenv(API_OPENWEATHER)  # OpenWeather API
+    SPAMWATCH_API = os.getenv(SPAMWATCH_API) # Your SpamWatch token
     
     
 class Production(Config):
