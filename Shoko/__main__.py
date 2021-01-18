@@ -189,9 +189,9 @@ def start(update, context):
                 disable_web_page_preview=True,
             )
     else:
-        update.effective_message.reply_text(
-            text="hey there! Erina is alive :3"
-                 "\n_Click the button below to know the current ping!_",
+        update.effective_message.reply_animation(
+            animation="https://i.imgur.com/Yz16hf7.gif",
+            caption="Hey there! Erina is alive and ready to serve you delicious food :3 \nClick the button below to know the current ping!",        
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
