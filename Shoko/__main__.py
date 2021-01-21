@@ -43,7 +43,7 @@ Hey there! my name is *{dispatcher.bot.first_name}*. If you have any questions o
 I'm here to make your group management fun and easy!
 i have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
 
-Any issues or need help related to me? join our group [Erina support chat](https://t.me/Shokosupport).
+Any issues or need help related to me? join our group [Erina Support Chat](https://t.me/Shokosupport).
 
 Wanna Add me to your Group? Just click the button below!
 """
@@ -181,8 +181,9 @@ def start(update, context):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_text(
-                PM_START_TEXT,
+            update.effective_message.reply_animation(
+                animation="https://telegra.ph/file/d9599769164d24905acaf.mp4",
+                caption=PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -443,7 +444,7 @@ def get_help(update, context):
     if chat.type != chat.PRIVATE:
 
         update.effective_message.reply_text(
-            "Click the button below to get help manu in your pm.",
+            "Click the button below to get help menu in your pm.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
