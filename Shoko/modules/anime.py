@@ -231,7 +231,10 @@ def anime(update, context):
             ]]
         else:
             buttons = [[InlineKeyboardButton("More Info", url=info)]]
-        buttons += [[InlineKeyboardButton("Add to Watchlist", callback_data=f"xanime_watchlist={anime_name_w}")]]
+        buttons += [[
+            InlineKeyboardButton("Add to Watchlist", callback_data=f"xanime_watchlist={anime_name_w}"),
+            InlineKeyboardButton("Join Our Official Group", url="https://t.me/JoinAnimeWorld")
+            ]]
         if image:
             try:
                 update.effective_message.reply_photo(
@@ -280,7 +283,10 @@ def character(update, context):
         image = json.get('image', None)
         if image:
             image = image.get('large')
-            buttons = [[InlineKeyboardButton("Add to favorite character", callback_data=f"xanime_fvrtchar={char_name}")]]
+            buttons = [[
+                InlineKeyboardButton("Add to favorite character", callback_data=f"xanime_fvrtchar={char_name}"),
+                InlineKeyboardButton("Join Our Official Group", url="https://t.me/Joinanimeworld")
+                ]]
             update.effective_message.reply_photo(
                 photo=image,
                 caption=msg.replace('<b>', '</b>'),
@@ -335,7 +341,10 @@ def manga(update, context):
         msg = msg[:-2]
         info = json['siteUrl']
         buttons = [[InlineKeyboardButton("More Info", url=info)]]
-        buttons += [[InlineKeyboardButton("Add to Read list", callback_data=f"xanime_manga={title}")]]
+        buttons += [[
+            InlineKeyboardButton("Add to Read list", callback_data=f"xanime_manga={title}"),
+            InlineKeyboardButton("Join Our Official Group", url="https://t.me/JOINANIMEWORLD")
+            ]]
         image = json.get("bannerImage", False)
         msg += f"_{json.get('description', None)}_"
         if image:
