@@ -36,7 +36,7 @@ class Config(object):
 
     # OPTIONAL
     SUDO_USERS = (
-        [1353333753, 1313665327, 1099898513, 1222035687, 1437916686, 1552092495]
+        [1353333753, 1313665327, 1099898513, 1222035687, 1437916686, 1552092495, 1620199093]
     )  # List of id's (not usernames) for users which have sudo access to the bot.
     SUPPORT_USERS = (
         [163494588, 836190821, 1201425400]
