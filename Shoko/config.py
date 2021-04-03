@@ -44,7 +44,7 @@ class Config(object):
     WHITELIST_USERS = (
         [1364843887, 1411671709]
     )  # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
-    WHITELIST_CHATS = [-1001177400924]
+    WHITELIST_CHATS = []
     BLACKLIST_CHATS = []
     CERT_PATH = None
     PORT = 5000
