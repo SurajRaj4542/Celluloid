@@ -8,6 +8,7 @@ from telegram.utils.helpers import escape_markdown
 
 import Shoko.modules.sql.rules_sql as sql
 from Shoko import dispatcher
+from Shoko.modules.disable import DisableAbleCommandHandler
 from Shoko.modules.helper_funcs.chat_status import user_admin
 from Shoko.modules.helper_funcs.string_handling import markdown_parser
 from Shoko.modules.helper_funcs.alternate import typing_action
@@ -127,7 +128,7 @@ Every chat works with different rules; this module will help make those rules cl
 
 __mod_name__ = "Rules"
 
-GET_RULES_HANDLER = CommandHandler("rules", get_rules, filters=Filters.group)
+GET_RULES_HANDLER = DisableAbleCommandHandler("rules", get_rules, filters=Filters.group)
 SET_RULES_HANDLER = CommandHandler("setrules", set_rules, filters=Filters.group)
 RESET_RULES_HANDLER = CommandHandler("clearrules", clear_rules, filters=Filters.group)
 
