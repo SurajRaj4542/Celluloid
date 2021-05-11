@@ -139,8 +139,8 @@ async def useridgetter(target):
     username = replied_user.user.username 
     username = "@{}".format(username) if username else (
         "This User has no Username")
-    await target.reply("**Name:** {} \n**User ID:** `{}`\n**Chat ID: `{}`**".format(
-        username, user_id, str(target.chat_id)))
+    await target.reply("**Name:** {} \n**User ID:** `{}`".format(
+        username, user_id))
 
 @run_async
 @typing_action
