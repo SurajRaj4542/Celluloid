@@ -36,10 +36,10 @@ class Config(object):
 
     # OPTIONAL
     SUDO_USERS = (
-        [1100420431, 1313665327, 1099898513, 1222035687, 1437916686, 1552092495, 1620199093, 1201425400, 1691070124, 1542443750, 696086626]
+        [1100420431, 696086626, 1183697491, 1099898513, 1201425400, 1353333753, 1213481085, 1691070124, 1313665327, 626886842, 1392872370, 1768681206, 689061386]
     )  # List of id's (not usernames) for users which have sudo access to the bot.
     SUPPORT_USERS = (
-        [163494588, 836190821, 446243273]
+        []
     )  # List of id's (not usernames) for users which are allowed to gban, but can also be banned.
     WHITELIST_USERS = (
         [1364843887, 1411671709]
