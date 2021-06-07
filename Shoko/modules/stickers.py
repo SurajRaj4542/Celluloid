@@ -515,7 +515,7 @@ def makepack_internal(
             )
         elif e.message == "Peer_id_invalid" or "bot was blocked by the user":
             msg.reply_text(
-                f"</b>{context.bot.first_name}</b> was blocked by you.",
+                f"<b>{context.bot.first_name}</b> was blocked by you.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
