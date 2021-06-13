@@ -1,4 +1,5 @@
 # Celluloid [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+[![Celluloid Stats Card](https://github-readme-stats.vercel.app/api/pin/?username=SurajRaj4542&repo=Celluloid&theme=midnight-purple)](https://github.com/SurajRaj4542/Celluloid)
 
 
 A modular telegram Python bot running on python3 with an sqlalchemy database.
