@@ -224,7 +224,7 @@ def gban(update, context):
         parse_mode=ParseMode.HTML,
         disable_web_page_preview=True,
     )
-    starting_usermsg = f"""<b>You've been globally banned</b>\n<b>Reason:</b> {reason}\n<b>Global Ban log:</b> <a href="https://t.me/gban_dump">here</a>\n<b>Appeal:</b> <a href="https://t.me/AmSuraj">here</a>"""
+    starting_usermsg = f"""<b>You've been globally banned</b>\n<b>Reason:</b> {reason}\n<b>Global Ban log:</b> <a href="https://t.me/gban_dump">here</a>\n<b>Appeal:</b> <a href="https://t.me/AW_SupportChat">here</a>"""
     
    
     try:
@@ -492,7 +492,7 @@ def __user_info__(user_id):
         user = sql.get_gbanned_user(user_id)
         if user.reason:
             text += "\nReason: <i>{}</i>".format(html.escape(user.reason))
-            text += "\n<i>- Appeal <a href={}>here</a>, if you think it's invalid.</i>".format('https://t.me/Shokosupport')
+            text += "\n<i>- Appeal <a href={}>here</a>, if you think it's invalid.</i>".format('https://t.me/AW_SupportChat')
     else:
         text = "<i>This user isn't  Globally banned.</i>"
     return text
