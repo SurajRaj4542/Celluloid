@@ -43,7 +43,7 @@ Hey there! my name is *{dispatcher.bot.first_name}*. If you have any questions o
 I'm here to make your group management fun and easy!
 i have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
 
-Any issues or need help related to me? join our group [Erina Support Chat](https://t.me/Shokosupport).
+Any issues or need help related to me? join our group [Chitanda Support Chat](https://t.me/Shokosupport).
 
 Wanna Add me to your Group? Just click the button below!
 """
@@ -63,7 +63,7 @@ buttons = [
 buttons += [
     [
         InlineKeyboardButton(
-            text="Add to Group 👥", url="t.me/ErinaRobot?startgroup=true"
+            text="Add to Group 👥", url="t.me/ChitandaRobot?startgroup=true"
         ),
        
     ]
@@ -192,7 +192,7 @@ def start(update, context):
     else:
         update.effective_message.reply_animation(
             animation="https://i.imgur.com/Yz16hf7.gif",
-            caption="Hey there! Erina is alive and ready to serve you delicious food :3 \nClick the button below to know the current ping!",        
+            caption="Hey there! Chitanda is alive and ready to solve your curiousity :3 \nClick the button below to know the current ping!",        
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -209,7 +209,7 @@ def start_p(update, context):
     if query.data == "start_ping":
         shoko_rbot = get_readable_time((time.time() - since_time_start))
         context.bot.answer_callback_query(query.id,
-                                          text=f"Erina is running since: {shoko_rbot}"
+                                          text=f"Chitanda is running since: {shoko_rbot}"
                                                f"\n\nTelegram ping: {ping()}",
                                           show_alert=True)
             
@@ -336,10 +336,10 @@ def Shoko_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text="*Erina is a bot for managing your group with additional features,*"               
-                 "\n\n_Erina's licensed under the GNU General Public License v3.0_,"
+            text="*Chitanda is a bot for managing your group with additional features,*"               
+                 "\n\n_Chitanda's licensed under the GNU General Public License v3.0_,"
                  "\nhere is the [repository](https://github.com/SurajRaj4542/Celluloid)."
-                 "\n\nIf any question about Erina, let us know at @Shokosupport.",
+                 "\n\nIf any question about Chitanda, let us know at @AW_SupportChat.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -366,8 +366,8 @@ def Shoko_about_callback(update, context):
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
             text="*Basic help:*"
-                 "\nTo add Erina to your chats, simply click [here](http://t.me/ErinaRobot?startgroup=true)  and select your chat."
-                 "\nYou can also click on @ErinaRobot, and go to the three dots on the top right of your screen, and select 'add to group'."
+                 "\nTo add Chitanda to your chats, simply click [here](http://t.me/ChitandaRobot?startgroup=true)  and select your chat."
+                 "\nYou can also click on @ChitandaRobot, and go to the three dots on the top right of your screen, and select 'add to group'."
                  "",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -381,11 +381,11 @@ def Shoko_about_callback(update, context):
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text="<b>Admin permissions:</b>"
-                 "\nTo avoid slowing down, Erina caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Erina will only find out ~10 minutes later."
+                 "\nTo avoid slowing down, Chitanda caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Chitanda will only find out ~10 minutes later."
                  "\n\nIf you are getting a message saying:"
                  "\n<Code>You must be this chat administrator to perform this action!</code>"
-                 "\nThis has nothing to do with Erina's rights; this is all about YOUR permissions as an admin. Erina respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Erina. Similarly, to change Erina settings, you need to have the Change group info permission."
-                 "\n\nThe message very clearly says that you need these rights - <i>not</i> Erina.",
+                 "\nThis has nothing to do with Chitanda's rights; this is all about YOUR permissions as an admin. Chitanda respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Chitanda. Similarly, to change Chitanda settings, you need to have the Change group info permission."
+                 "\n\nThe message very clearly says that you need these rights - <i>not</i> Chitanda.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]),
         )
@@ -405,7 +405,8 @@ def Shoko_about_callback(update, context):
                  "\n • If in chat, toggles that chat's status."
                  "\n_If someone in your group thinks someone needs reporting, they now have an easy way to call all admins._"
                  "\n\n- /lock <type>: Lock items of a certain type (not available in private)"
-                 "\n- /locktypes: Lists all possible locktypes"
+                 "\n- /lo
+           locktypes: Lists all possible locktypes"
                  "\n_The locks module allows you to lock away some common items in the telegram world; the bot will automatically delete them!_"
                  "\n\n- /addwarn <keyword> <reply message>: Sets a warning filter on a certain keyword. If you want your keyword to be a sentence, encompass it with quotes, as such: /addwarn \"very angry\" This is an angry user. "
                  "\n- /warn <userhandle>: Warns a user. After 3 warns, the user will be banned from the group. Can also be used as a reply."
