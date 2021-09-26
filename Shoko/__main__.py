@@ -43,7 +43,7 @@ Hey there! my name is *{dispatcher.bot.first_name}*. If you have any questions o
 I'm here to make your group management fun and easy!
 i have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
 
-Any issues or need help related to me? join our group [Chitanda Support Chat](https://t.me/Shokosupport).
+Any issues or need help related to me? join our group [Chitanda Support Chat](https://t.me/AW_SupportChat).
 
 Wanna Add me to your Group? Just click the button below!
 """
@@ -182,7 +182,7 @@ def start(update, context):
 
         else:
             update.effective_message.reply_animation(
-                animation="https://telegra.ph/file/d9599769164d24905acaf.mp4",
+                animation="https://c.tenor.com/Hyrkr0UrTV4AAAAC/chloe-maid-uwu.gif",
                 caption=PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
@@ -191,7 +191,7 @@ def start(update, context):
             )
     else:
         update.effective_message.reply_animation(
-            animation="https://i.imgur.com/Yz16hf7.gif",
+            animation="https://c.tenor.com/dY3SVY7FGYEAAAAC/anime-blush.gif",
             caption="Hey there! Chitanda is alive and ready to solve your curiousity :3 \nClick the button below to know the current ping!",        
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
