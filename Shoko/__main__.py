@@ -405,8 +405,7 @@ def Shoko_about_callback(update, context):
                  "\n • If in chat, toggles that chat's status."
                  "\n_If someone in your group thinks someone needs reporting, they now have an easy way to call all admins._"
                  "\n\n- /lock <type>: Lock items of a certain type (not available in private)"
-                 "\n- /lo
-           locktypes: Lists all possible locktypes"
+                 "\n- /locktypes: Lists all possible locktypes"
                  "\n_The locks module allows you to lock away some common items in the telegram world; the bot will automatically delete them!_"
                  "\n\n- /addwarn <keyword> <reply message>: Sets a warning filter on a certain keyword. If you want your keyword to be a sentence, encompass it with quotes, as such: /addwarn \"very angry\" This is an angry user. "
                  "\n- /warn <userhandle>: Warns a user. After 3 warns, the user will be banned from the group. Can also be used as a reply."
