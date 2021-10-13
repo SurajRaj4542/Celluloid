@@ -26,7 +26,7 @@ For discussion, bug reporting, and help, you can join [our discussion group](htt
 
 If you find a bug, don't be afraid to report it in our Telegram group or open an issue on this repository.
 
-You can find this repo example on Telegram as [Erina Nakiri](https://t.me/ErinaRobot) and [Shoko Nishimiya](https://t.me/zoldycktmbot)
+You can find this repo example on Telegram as [Chitanda Eru](https://t.me/ChitandaRobot) and [Shoko Nishimiya](https://t.me/zoldycktmbot)
 
 So, what i did is changed the environment of Shoko to Erina (just this much ) yup!! { FYI - All the code in this repo is taken by permission from its respective owner }
 
