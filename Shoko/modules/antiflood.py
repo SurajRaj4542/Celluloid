@@ -34,6 +34,9 @@ def check_flood(update, context) -> str:
         sql.update_flood(chat.id, None)
         return ""
     
+    if (user.id == 777000):
+        return ""
+
     should_ban = sql.update_flood(chat.id, user.id)
     if not should_ban:
         return ""
