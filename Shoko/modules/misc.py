@@ -42,8 +42,10 @@ from telethon import events
 
 TMP_DOWNLOAD_DIRECTORY = "./"
 
-@client.on(events.NewMessage(pattern="^[!/]info(?: |$)(.*)"))
-async def who(event):
+
+@run_async
+@typing_action
+def who(update, context):
     """ For .whois command, get info about a user. """
     
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
@@ -416,6 +418,7 @@ An "odds and ends" module for small, simple commands which don't really fit anyw
 
 __mod_name__ = "Miscs"
 
+INFO_HANDLER = DisableAbleCommandHandler("who", who)
 ECHO_HANDLER = CommandHandler("echo", echo, filters=CustomFilters.sudo_filter)
 MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help, filters=Filters.private)
 STATS_HANDLER = DisableAbleCommandHandler("stats", stats, filters=CustomFilters.sudo_filter)
@@ -431,6 +434,7 @@ STAFFLIST_HANDLER = CommandHandler(
 REDDIT_MEMES_HANDLER = DisableAbleCommandHandler("rmeme", rmemes)
 SRC_HANDLER = CommandHandler("source", src, filters=Filters.private)
 
+dispatcher.add_handler(INFO_HANDLER)
 dispatcher.add_handler(UD_HANDLER)
 dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
