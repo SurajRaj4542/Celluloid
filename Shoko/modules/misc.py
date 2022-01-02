@@ -51,16 +51,16 @@ def who(update, context):
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
     
-    replied_user = await get_user(event)
+    replied_user = await get_user()
 
-    caption = await fetch_info(replied_user, event)
+    caption = await fetch_info(replied_user)
 
-    message_id_to_reply = event.message.reply_to_msg_id
+    message_id_to_reply = message.reply_to_msg_id
 
     if not message_id_to_reply:
         message_id_to_reply = None
 
-    await event.reply(caption, parse_mode="html",
+    await reply(caption, parse_mode="html",
                       link_preview=False)
 
 async def fetch_info(replied_user, event):
