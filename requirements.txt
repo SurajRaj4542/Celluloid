@@ -22,7 +22,6 @@ bs4
 telegraph
 pillow
 psutil
-speedtest-cli>=2.0.2
 google_trans_new
 wikipedia
 spamwatch
