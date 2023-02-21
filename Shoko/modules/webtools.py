@@ -1,4 +1,4 @@
-import speedtest
+'import speedtest'
 import requests
 import datetime
 import platform
@@ -56,7 +56,7 @@ def get_bot_ip(update, context):
     update.message.reply_text(res.text)
 
 
-@run_async
+'''@run_async
 @typing_action
 def speedtst(update, context):
     message = update.effective_message
@@ -79,7 +79,7 @@ def speedtst(update, context):
         update.effective_chat.id,
         ed_msg.message_id,
     )
-
+'''
 
 @run_async
 @typing_action
